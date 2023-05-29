@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="539.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.glvoiturefx.LocationController">
+  <children>
+    <VBox layoutX="14.0" layoutY="41.0" prefHeight="300.0" prefWidth="247.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="41.0">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cin" />
+        <TextField fx:id="TCin" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Matricule" />
+        <TextField fx:id="TMatricule" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date_Debut" />
+        <DatePicker fx:id="Date_Debut" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date_Fin" />
+        <DatePicker fx:id="Date_Fin" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PrixParJour" />
+        <TextField fx:id="TPrixParJour" />
+      </children>
+    </VBox>
+    <TableView fx:id="Table" layoutX="324.0" layoutY="140.0" onMouseClicked="#getData" prefHeight="258.0" prefWidth="606.0" AnchorPane.rightAnchor="32.60000000000002" AnchorPane.topAnchor="140.0">
+      <columns>
+        <TableColumn fx:id="colId" prefWidth="80.2" text="Location ID" />
+        <TableColumn fx:id="colCin" prefWidth="87.6" text="CIN" />
+        <TableColumn fx:id="colMatricule" prefWidth="90.6" text="Matricule" />
+        <TableColumn fx:id="colDateDebut" prefWidth="115.0" text="Date_Debut" />
+        <TableColumn fx:id="colDateFin" prefWidth="96.6" text="Date_Fin" />
+        <TableColumn fx:id="colPrixParJour" prefWidth="156.2" text="PrixParJour" />
+      </columns>
+    </TableView>
+    <ButtonBar layoutX="472.0" layoutY="54.0" prefHeight="41.0" prefWidth="354.0">
+      <buttons>
+        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveLocation" text="Save" />
+        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateLocation" text="Update" />
+        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteLocation" text="Delete" />
+        <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearField" text="Clear" />
+      </buttons>
+    </ButtonBar>
+    <Button fx:id="btnExportExcel" layoutX="625.0" layoutY="445.0" mnemonicParsing="false" onAction="#exportToExcel" prefHeight="34.0" prefWidth="120.0" text="Export to Excel" />
+    <Button fx:id="btnImportExcel" layoutX="767.0" layoutY="445.0" mnemonicParsing="false" onAction="#importFromExcel" prefHeight="34.0" prefWidth="120.0" text="Import from Excel" />
+      <Button fx:id="btnExportTXT" layoutX="338.0" layoutY="445.0" mnemonicParsing="false" onAction="#exportDataToTxtFile" prefHeight="34.0" prefWidth="120.0" text="Export to TXT" />
+      <Button fx:id="btnImportTXT" layoutX="479.0" layoutY="445.0" mnemonicParsing="false" onAction="#importDataFromTxtFile" prefHeight="34.0" prefWidth="120.0" text="Import from TXT" />
+  </children>
+</AnchorPane>

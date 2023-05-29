@@ -1,0 +1,5 @@
+Location{id=3, cin='BE8796', matricule='BK7585', dateDebut=2014-05-23, dateFin=2014-05-23, prixParJour=200.0}
+Location{id=6, cin='BK9389', matricule='JHDIO', dateDebut=2029-11-09, dateFin=2029-11-09, prixParJour=933.0}
+Location{id=8, cin='BA3997', matricule='EAU789', dateDebut=2034-11-13, dateFin=2034-11-13, prixParJour=350.0}
+Location{id=11, cin='BK9080', matricule='BA7098', dateDebut=2031-11-13, dateFin=2031-11-13, prixParJour=350.0}
+Location{id=12, cin='BK7628', matricule='EAU789', dateDebut=2031-11-13, dateFin=2031-11-13, prixParJour=350.0}
